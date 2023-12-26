@@ -42,7 +42,7 @@ public class ConstructorTest {
         mainPage.open();
         driver.manage().timeouts().implicitlyWait(7, SECONDS);
         mainPage.clickSauceAnchor();
-        mainPage.clickBugsAnchor();
+        mainPage.clickBunsAnchor();
 
         Assert.assertTrue(mainPage.isBugsHeaderVisible());
     }

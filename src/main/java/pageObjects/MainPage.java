@@ -15,6 +15,10 @@ public class MainPage {
     private final By sauce = By.xpath(".//span[text()='Соусы']");
     private final By bugs = By.xpath(".//span[text()='Булки']");
     private final By fillings = By.xpath(".//span[text()='Начинки']");
+    private final By bunsActive = By.xpath("//div[contains(span/text(),'Булки') and contains(@class,'current')]");
+    private final By sauceActive = By.xpath("//div[contains(span/text(),'Соусы') and contains(@class,'current')]");
+    private final By fillingsActive = By.xpath("//div[contains(span/text(),'Начинки') and contains(@class,'current')]");
+
     private final By bugsHeader = By.xpath(".//h2[text()='Булки']");
     private final By sauceHeader = By.xpath(".//h2[text()='Соусы']");
     private final By fillingsHeader = By.xpath(".//h2[text()='Начинки']");
@@ -46,7 +50,7 @@ public class MainPage {
         return new MainPage(driver);
     }
 
-    public MainPage clickBugsAnchor() {
+    public MainPage clickBunsAnchor() {
         driver.findElement(bugs).click();
         return new MainPage(driver);
     }
@@ -57,15 +61,15 @@ public class MainPage {
     }
 
     public boolean isSauceHeaderVisible() {
-        return driver.findElement(sauceHeader).isDisplayed();
+        return driver.findElement(sauceActive).isDisplayed();
     }
 
     public boolean isBugsHeaderVisible() {
-        return driver.findElement(bugsHeader).isDisplayed();
+        return driver.findElement(bunsActive).isDisplayed();
     }
 
     public boolean isFillingsHeaderVisible() {
-        return driver.findElement(fillingsHeader).isDisplayed();
+        return driver.findElement(fillingsActive).isDisplayed();
     }
 
     //методы для скролла до заголовков разделов

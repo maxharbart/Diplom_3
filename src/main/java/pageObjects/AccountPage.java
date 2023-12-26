@@ -6,10 +6,10 @@ import org.openqa.selenium.WebDriver;
 public class AccountPage {
     private final WebDriver driver;
 
-    private final By profileNameField = By.xpath(".//input[@name='Name']");
+    private final By profileNameField = By.xpath(".//input[@name='name']");
     private final By constructorButton = By.xpath(".//p[text()='Конструктор']");
     private final By logo = By.className("AppHeader_header__logo__2D0X2");
-    private final By logOutButton = By.xpath(".//button[text()='Выход']");
+    private final By logOutButton = By.xpath("//*[@id=\"root\"]/div/main/div/nav/ul/li[3]/button");
 
     public AccountPage(WebDriver driver) {
         this.driver=driver;

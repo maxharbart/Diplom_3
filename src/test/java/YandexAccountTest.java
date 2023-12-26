@@ -14,8 +14,8 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class YandexAccountTest {
     private WebDriver driver;
-    private final String email = "maxharbart1@yandex.ru";
-    private final String password = "password1";
+    private final String email = "asdasd@esd.com";
+    private final String password = "asdasd";
 
     @Before
     public void setUp() {
