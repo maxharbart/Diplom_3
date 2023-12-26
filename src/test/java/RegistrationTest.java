@@ -65,8 +65,6 @@ public class RegistrationTest {
         mainPage1.clickPersonalAccountButton();
         driver.manage().timeouts().implicitlyWait(5, SECONDS);
 
-        AccountPage personalAccountPage = new AccountPage(driver);
-
         Assert.assertTrue("Profile isn't shown, registration was not successful", accountPage.isProfileNameFieldDisplayed());
     }
 
